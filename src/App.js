@@ -6,10 +6,14 @@ import JobForm from "./components/JobForm";
 function App() {
   const [roleState, setRoleState] = useState([]);
 
+  const addRoleHander = newRole => {
+    setRoleState([...roleState, newRole]);
+  };
+
   return (
     <div>
-      <h1>Our Jobs Form</h1>
-      <JobForm />
+      <h1>Jobs Form</h1>
+      <JobForm addRole={addRoleHander} />
       <Jobs jobs={roleState} />
     </div>
   );
