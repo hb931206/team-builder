@@ -4,7 +4,14 @@ import Jobs from "./components/Jobs";
 import JobForm from "./components/JobForm";
 
 function App() {
-  const [roleState, setRoleState] = useState([]);
+  const [roleState, setRoleState] = useState([
+    {
+      id: 1,
+      name: "Henry Brophy",
+      email: "henrybrophy93@gmail.com",
+      role: "front-end developer"
+    }
+  ]);
 
   const addRoleHander = newRole => {
     setRoleState([...roleState, newRole]);
